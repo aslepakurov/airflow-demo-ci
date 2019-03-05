@@ -1,7 +1,7 @@
 from airflow.operators.bash_operator import BashOperator
 from airflow.models import DAG, Variable
 from airflow.utils import dates
-from airflow.operators.bash_reader import BashReader
+from airflow.operators import BashReader
 
 br = BashReader(__file__)
 hour_start = Variable.get('hour_start')
